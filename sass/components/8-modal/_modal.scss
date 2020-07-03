@@ -1,0 +1,208 @@
+@import './backdrop-modal';
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 528px;
+  height: 580px;
+  padding: 40px;
+
+  background-color: $primary-white-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  transition: transform $cubic;
+
+  &__close-icon {
+    border: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    --color3: rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    min-width: 449px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+
+    margin: 0 0 30px;
+  }
+
+  &__send-btn {
+    padding: 10px 55px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding: 12px 18px 12px 42px;
+    margin: 0;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: 0px;
+
+    &:focus {
+      border-color: $accent-color;
+    }
+
+    &--comment {
+      padding: 12px 16px;
+      resize: none;
+      height: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-check {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $primary-text-color;
+  }
+
+  &__label-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      fill: $accent-color;
+      --color2: $accent-color;
+    }
+  }
+
+  &__check-icon {
+    display: inline-block;
+    margin-right: 5px;
+    width: 15px;
+    height: 16px;
+    border: 2px solid black;
+    border-radius: 20%;
+    transition: checked 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .checkbox-hidden:checked + & {
+      background-color: $accent-color;
+      border-color: $accent-color;
+      background-image: url(../images/modal-check.svg);
+      background-size: contain;
+      background-origin: border-box;
+    }
+  }
+
+  &__box-icon {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 16px;
+
+    transform: translateY(-50%);
+    transition: transform $cubic;
+
+    pointer-events: none;
+  }
+
+  &__check-link {
+    text-decoration: underline;
+  }
+
+  &__input:focus {
+    color: $accent-color;
+  }
+}
+
+// формы & span
+
+.modal-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  &--comment {
+    position: relative;
+    height: 120px;
+  }
+}
+
+// modal icons, inputs & labels
+
+.modal__label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+
+  display: inline-block;
+  transform: translateY(-50%);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.01em;
+
+  color: $primary-text-color;
+  transition: transform $cubic;
+
+  .modal-item:focus-within &,
+  .modal__input:not(:placeholder-shown) + & {
+    transform: translateX(-26px) translateY(-32px);
+    fill: $accent-color;
+    color: $accent-color;
+  }
+
+  &--comment {
+    top: 20px;
+    left: 16px;
+  }
+
+  .modal-item--comment:focus-within &,
+  .modal__input--comment:not(:placeholder-shown) + & {
+    transform: translateY(-32px);
+  }
+}
+
+.checkbox-hidden {
+  @extend %visually-hidden;
+}
+
+.modal-item-icon {
+  fill: $title-text-color;
+
+  .modal-item:focus-within & {
+    fill: $accent-color;
+    color: $accent-color;
+  }
+}

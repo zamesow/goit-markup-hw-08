@@ -1,0 +1,56 @@
+.team {
+  @extend %section-padding;
+
+  &__container {
+    @extend %container-padding;
+  }
+
+  &__title {
+    @extend %section-title;
+    margin-top: 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    padding-left: 0px;
+    font-size: 0;
+  }
+
+  &__item {
+    width: calc((100% - 3 * 30px) / 4);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: $fw-500;
+    color: $title-text-color;
+    margin-top: 30px;
+  }
+
+  &__text {
+    font-weight: $fw-400;
+    color: $primary-text-color;
+    margin-top: 10px;
+  }
+
+  &__subtitle,
+  &__text {
+    font-size: $fs-16;
+    line-height: $lh-119;
+
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+@import '../soc-links';

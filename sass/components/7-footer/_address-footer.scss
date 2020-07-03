@@ -1,0 +1,30 @@
+.footer-address-cont {
+  flex-direction: column;
+
+  .address {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    color: $primary-white-color;
+    margin-top: 20px;
+
+    &__link {
+      color: rgba(255, 255, 255, 0.6);
+      transition: color $cubic;
+
+      &:focus {
+        border: 2px solid $accent-color;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      &--email {
+        margin-top: 9px;
+        margin-bottom: 9px;
+      }
+    }
+  }
+}

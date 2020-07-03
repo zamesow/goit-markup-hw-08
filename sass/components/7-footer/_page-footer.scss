@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 94px;
+  background-color: #2f303a;
+
+  &__container {
+    @extend %container-padding;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: baseline;
+
+    .logo__studio--inverse {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: $primary-white-color;
+    }
+    @import './address-footer';
+    @import './soc-links-footer';
+    @import './folow-footer';
+  }
+}

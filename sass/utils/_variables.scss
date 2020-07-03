@@ -1,0 +1,87 @@
+// цветовая палитра
+
+$primary-text-color: #757575;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+$primary-white-color: #ffffff;
+$secondary-bg-color: #f5f4fa;
+$icons-grey-color: #afb1b8;
+
+// шрифты
+
+$font-index: Roboto, sans-serif;
+$font-portfolio: Raleway, sans-serif;
+
+$fw-400: 400;
+$fw-500: 500;
+$fw-700: 700;
+$fw-900: 900;
+
+$fs-0: 0;
+$fs-12: 12px;
+$fs-14: 14px;
+$fs-16: 16px;
+$fs-18: 18px;
+$fs-20: 20px;
+$fs-26: 26px;
+$fs-36: 36px;
+$fs-44: 44px;
+
+$lh-114: 1.14;
+$lh-115: 1.15;
+$lh-119: 1.19;
+$lh-125: 1.25;
+$lh-136: 1.36;
+$lh-156: 1.56;
+$lh-163: 1.63;
+$lh-171: 1.71;
+$lh-188: 1.88;
+$lh-2: 2;
+
+// Размер для всех блоков по размеру блока, а не контента
+
+html {
+  box-sizing: border-box;
+}
+
+// наследие border-box
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $primary-white-color;
+  font-family: $font-index;
+  letter-spacing: 0.03em;
+}
+
+// все картинки масштабируем относительно размера
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// все ссылки не подчеркиваются
+
+a {
+  text-decoration: none;
+}
+
+// убираем маркеры
+
+ul {
+  list-style: none;
+}
+
+// переход
+
+$cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+@mixin transition($property) {
+  transition: $property $cubic;
+}

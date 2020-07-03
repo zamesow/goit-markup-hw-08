@@ -1,0 +1,86 @@
+.clients {
+  @extend %section-padding;
+
+  &__container {
+    @extend %container-padding;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0px;
+  }
+
+  &__item {
+    width: calc((100% - 5 * 30px) / 6);
+    height: 90px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $icons-grey-color;
+    border-radius: 4px;
+    transition: border $cubic;
+
+    &:hover {
+      border: 1px solid $accent-color;
+      color: $accent-color;
+      fill: $accent-color;
+    }
+
+    &:focus {
+      border: 2px solid $accent-color;
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+
+  &__icon {
+    fill: $icons-grey-color;
+    transition: fill $cubic;
+
+    &--one {
+      width: 45px;
+      height: 50px;
+    }
+    &--two {
+      width: 40px;
+      height: 52px;
+    }
+    &--three {
+      width: 41px;
+      height: 43px;
+    }
+    &--four {
+      width: 80px;
+      height: 43px;
+    }
+    &--five {
+      width: 59px;
+      height: 47px;
+    }
+    &--six {
+      width: 89px;
+      height: 46px;
+    }
+    .clients__link:hover &,
+    .clients__link:focus & {
+      fill: $accent-color;
+    }
+  }
+}

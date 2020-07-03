@@ -1,0 +1,15 @@
+.logo {
+  color: $accent-color;
+  font-family: $font-portfolio;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  @include transition(color);
+
+  &:focus {
+    border: 2px solid $accent-color;
+    border-radius: 4px;
+    outline: none;
+  }
+}

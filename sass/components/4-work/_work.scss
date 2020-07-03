@@ -1,0 +1,52 @@
+.work {
+  @extend %section-padding;
+
+  &__container {
+    @extend %container-padding;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__list {
+    justify-content: center;
+    padding-left: 0px;
+    margin-top: 50px;
+    margin-bottom: 0;
+    display: flex;
+    text-align: center;
+  }
+  &__item {
+    width: calc((100% - 2 * 30px) / 3);
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+  }
+
+  &__subtitle {
+    margin: 0;
+
+    font-weight: $fw-700;
+    font-size: $fs-14;
+    line-height: $lh-114;
+    text-transform: uppercase;
+
+    color: $primary-white-color;
+  }
+}
