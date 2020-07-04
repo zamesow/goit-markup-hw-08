@@ -1,24 +1,32 @@
-.header,
-.footer {
+// .header {
+//   &__container {
+//     @media screen and (min-width: 1200px) {
+//       width: 1200px;
+//     }
+//     @extend %container-padding;
+//     @extend %header-font;
+//     .logo__studio {
+//       color: #000000;
+//     }
+//   }
+// }
+
+.header {
+  @import './nav-menu';
+
+  border-bottom: 1px solid #ececec;
+}
+
+.header__container,
+.footer__container {
   @import '../logo';
 }
 
-.header {
-  @extend %container-padding;
-
-  letter-spacing: 0.02em;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-
-  display: flex;
-  align-items: center;
-  border-bottom: $border;
-
+.header__container {
   .logo__studio {
     color: #000000;
   }
+  @extend %flex-align;
 }
 
-@import './nav';
-@import './address-header';
+@import './nav-btn';

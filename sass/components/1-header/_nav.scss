@@ -1,4 +1,6 @@
 .header-nav {
+  @extend %nav-font;
+
   margin-right: auto;
   margin-left: 85px;
 

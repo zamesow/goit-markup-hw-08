@@ -24,14 +24,15 @@
       margin-right: 30px;
     }
   }
-}
-.address-icon {
-  fill: $primary-text-color;
-  margin-right: 10px;
-  @include transition(fill);
 
-  .header-address__link:hover &,
-  .header-address__link:focus & {
-    fill: $accent-color;
+  .address-icon {
+    fill: $primary-text-color;
+    margin-right: 10px;
+    @include transition(fill);
+
+    .header-address__link:hover &,
+    .header-address__link:focus & {
+      fill: $accent-color;
+    }
   }
 }

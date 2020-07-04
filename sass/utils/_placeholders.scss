@@ -9,9 +9,59 @@
   font-family: $font-index;
   letter-spacing: 0.03em;
 }
+// -----------------------
+
+%flex-align {
+  display: flex;
+  align-items: center;
+}
+
+%flex-just-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// -----------------------
+
+%nav-font {
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+}
+// ------------------------
+
+// ------------------------
+
+%section-padding-mob {
+  padding-top: 60px;
+}
+
+%section-padding-tab {
+  padding-top: 60px;
+}
 
 %section-padding {
   padding-top: 94px;
+}
+
+// -------------------------
+
+%container-padding-mob {
+  width: 480px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%container-padding-tab {
+  width: 768px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 %container-padding {
@@ -21,6 +71,8 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+// ----------------------------
 
 %section-title {
   font-weight: $fw-700;
@@ -43,4 +95,14 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+// --------------------------
+
+%hero-font {
+  font-weight: 900;
+  color: $primary-white-color;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.06em;
+  max-width: 700px;
 }
