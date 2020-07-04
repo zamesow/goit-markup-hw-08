@@ -1,38 +1,40 @@
-.header-address {
-  display: inline-flex;
-  align-items: center;
-
-  &__link {
-    color: $primary-text-color;
-    font-style: normal;
+.nav-menu {
+  .header-address {
     display: inline-flex;
     align-items: center;
 
-    @include transition(color);
+    &__link {
+      color: $primary-text-color;
+      font-style: normal;
+      display: inline-flex;
+      align-items: center;
 
-    &:hover,
-    &:focus {
-      color: $accent-color;
+      @include transition(color);
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+      &:focus {
+        border: 2px solid $accent-color;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      &--mail {
+        margin-right: 30px;
+      }
     }
-    &:focus {
-      border: 2px solid $accent-color;
-      border-radius: 4px;
-      outline: none;
-    }
 
-    &--mail {
-      margin-right: 30px;
-    }
-  }
+    .address-icon {
+      fill: $primary-text-color;
+      margin-right: 10px;
+      @include transition(fill);
 
-  .address-icon {
-    fill: $primary-text-color;
-    margin-right: 10px;
-    @include transition(fill);
-
-    .header-address__link:hover &,
-    .header-address__link:focus & {
-      fill: $accent-color;
+      .header-address__link:hover &,
+      .header-address__link:focus & {
+        fill: $accent-color;
+      }
     }
   }
 }

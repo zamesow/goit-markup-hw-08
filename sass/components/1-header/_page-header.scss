@@ -12,8 +12,6 @@
 // }
 
 .header {
-  @import './nav-menu';
-
   border-bottom: 1px solid #ececec;
 }
 
@@ -27,6 +25,9 @@
     color: #000000;
   }
   @extend %flex-align;
-}
+  @import './nav-menu';
+  @import './nav';
 
-@import './nav-btn';
+  @import './address-header';
+  @import './nav-btn';
+}

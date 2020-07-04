@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //background-color: transparent;
+  background-color: transparent;
 
   padding: 0;
   border: none;
@@ -12,9 +12,14 @@
     fill: #000000;
     padding: 0;
     border: none;
-    padding: 11px 8px;
+
+    &:hover,
+    &:focus {
+      fill: $accent_color;
+    }
   }
-  &__close {
-    padding-left: 3px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
