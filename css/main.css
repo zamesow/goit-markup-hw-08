@@ -308,7 +308,7 @@ summary {
           align-items: center;
 }
 
-.features .features-box {
+.hero, .features__item .features-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,24 +544,18 @@ summary {
 }
 
 .hero {
-  margin-left: auto;
-  margin-right: auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 640px;
-  min-height: 400px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url("../images/fonpic-mob.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/fonpic-mob.jpg");
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    max-width: 640px;
+    height: 400px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url("../images/fonpic-mob.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/fonpic-mob.jpg");
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -654,9 +648,6 @@ summary {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -676,31 +667,31 @@ summary {
 @media screen and (min-width: 1200px) {
   .features__item {
     width: calc((100% - 3 * 30px) / 4);
-    margin: 15px;
+    margin: 0 15px 0;
   }
 }
 
-.features .features-box {
+.features__item .features-box {
+  background-color: #f5f4fa;
   width: 100%;
   height: 120px;
-  background-color: #f5f4fa;
   border-radius: 4px;
-}
-
-.features .features__subtitle {
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-@media screen and (max-width: 767px) and (max-width: 1199px) {
-  .features .features__subtitle {
-    text-align: center;
-  }
 }
 
 .features__icon {
   width: 70px;
   height: 70px;
+}
+
+.features__subtitle {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) and (max-width: 1199px) {
+  .features__subtitle {
+    text-align: center;
+  }
 }
 
 .features__text {
