@@ -1,8 +1,23 @@
 .footer-soc-links {
   padding: 0;
-
-  margin-left: 69px;
-  font-size: 0;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 206px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 165px;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 69px;
+    font-size: 0;
+  }
 
   &__title {
     font-weight: 700;
@@ -14,6 +29,16 @@
     margin-top: 0;
     margin-bottom: 20px;
     color: $primary-white-color;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
+
+.folow-box {
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

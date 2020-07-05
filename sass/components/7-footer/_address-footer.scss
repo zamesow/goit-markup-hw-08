@@ -1,5 +1,18 @@
 .footer-address-cont {
   flex-direction: column;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 0;
+    margin-bottom: 60px;
+    width: 232 px;
+    display: inline-block;
+    margin-left: 76px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+  }
 
   .address {
     font-weight: 400;

@@ -20,24 +20,29 @@
 
   &__list {
     margin-top: 0px;
-    margin-bottom: -15;
+    margin-block-end: 0;
     padding: 0px;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       display: flex;
       flex-wrap: wrap;
-
+      margin: -15px;
       justify-content: center;
     }
 
     @media screen and (min-width: 1200px) {
       display: flex;
       justify-content: space-between;
+      margin: -15px;
     }
   }
 
   &__item {
-    @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
     }
 
     @media screen and (min-width: 768px) {

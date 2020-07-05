@@ -1,18 +1,9 @@
-.nav-menu {
+.header-nav {
   @media screen and (max-width: 767px) {
     display: none;
   }
-  display: flex;
-  justify-content: space-between;
-
-  margin-left: 85px;
-
-  flex-grow: 1;
-}
-
-.header-nav {
   @extend %nav-font;
-
+  margin-left: 85px;
   &__list {
     width: 294px;
     display: flex;
