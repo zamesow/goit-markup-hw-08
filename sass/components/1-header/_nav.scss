@@ -3,13 +3,14 @@
     display: none;
   }
   @media screen and (min-width: 768px) {
-    display: flex;
+    width: 100%;
+    display: inline-flex;
   }
   .header-nav {
     @extend %nav-font;
 
-    margin-right: auto;
     margin-left: 85px;
+    margin-right: auto;
 
     &__list {
       width: 294px;
