@@ -1,28 +1,54 @@
 .clients {
-  @extend %section-padding;
-
-  &__container {
-    @extend %container-padding;
-  }
-
   &__title {
     @extend %section-title;
+    @media screen and (max-width: 1199px) {
+      font-size: 28px;
+      line-height: 1.18;
+    }
   }
 
   &__list {
-    display: flex;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0px;
+    padding-left: 0;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0px;
+    }
   }
 
   &__item {
-    width: calc((100% - 5 * 30px) / 6);
     height: 90px;
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @media screen and (max-width: 767px) {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+    // &:nth-child(2n + 1) {
+    //   @media screen and (max-width: 767px) {
+    //   }
+    // }
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 5 * 30px) / 6);
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
   &__link {

@@ -1,12 +1,14 @@
 .work {
-  @extend %section-padding;
-
-  &__container {
-    @extend %container-padding;
+  @media screen and (max-width: 1199px) {
+    display: none;
   }
 
   &__title {
     @extend %section-title;
+    @media screen and (max-width: 1199px) {
+      font-size: 28px;
+      line-height: 1.18;
+    }
   }
 
   &__list {

@@ -1,8 +1,18 @@
 .header-address {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
   display: inline-flex;
   align-items: center;
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    display: inline-block;
+    font-size: 12px;
+    line-height: 1.17;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &__link {
@@ -25,8 +35,9 @@
 
     &--mail {
       margin-right: 30px;
-
       @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 20px;
+        margin-bottom: 10px;
         margin-right: 0;
       }
     }
