@@ -2,59 +2,57 @@
   @media screen and (max-width: 767px) {
     display: none;
   }
-  @media screen and (min-width: 768px) {
-    width: 100%;
-    display: inline-flex;
+  display: flex;
+  justify-content: space-between;
+
+  margin-left: 85px;
+}
+
+.header-nav {
+  @extend %nav-font;
+
+  &__list {
+    width: 294px;
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 0px;
+    margin: 0;
   }
-  .header-nav {
-    @extend %nav-font;
 
-    margin-left: 85px;
-    margin-right: auto;
+  &__item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
-    &__list {
-      width: 294px;
-      display: flex;
-      justify-content: space-between;
+  &__link {
+    position: relative;
+    color: $title-text-color;
+    transition: color $cubic;
+    padding-bottom: 32px;
 
-      padding-left: 0px;
-      margin: 0;
+    &:hover,
+    &:focus,
+    &--active {
+      color: $accent-color;
     }
 
-    &__item {
-      padding-top: 32px;
-      padding-bottom: 32px;
+    &:focus {
+      border: 2px solid $accent-color;
+      border-radius: 4px;
+      outline: none;
     }
 
-    &__link {
-      position: relative;
-      color: $title-text-color;
-      transition: color $cubic;
-      padding-bottom: 32px;
+    &--active::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
 
-      &:hover,
-      &:focus,
-      &--active {
-        color: $accent-color;
-      }
-
-      &:focus {
-        border: 2px solid $accent-color;
-        border-radius: 4px;
-        outline: none;
-      }
-
-      &--active::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-
-        display: inline-block;
-        width: 100%;
-        height: 4px;
-        background-color: $accent-color;
-        border-radius: 2px;
-      }
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      border-radius: 2px;
     }
   }
 }

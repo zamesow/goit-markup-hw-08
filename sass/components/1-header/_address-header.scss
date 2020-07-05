@@ -1,28 +1,33 @@
-.nav-menu {
-  .header-address {
-    display: inline-flex;
+.header-address {
+  display: inline-flex;
+  align-items: center;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: inline-block;
+  }
+
+  &__link {
+    color: $primary-text-color;
+    font-style: normal;
+    display: flex;
     align-items: center;
 
-    &__link {
-      color: $primary-text-color;
-      font-style: normal;
-      display: inline-flex;
-      align-items: center;
+    @include transition(color);
 
-      @include transition(color);
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+    &:focus {
+      border: 2px solid $accent-color;
+      border-radius: 4px;
+      outline: none;
+    }
 
-      &:hover,
-      &:focus {
-        color: $accent-color;
-      }
-      &:focus {
-        border: 2px solid $accent-color;
-        border-radius: 4px;
-        outline: none;
-      }
+    &--mail {
+      margin-right: 30px;
 
-      &--mail {
-        margin-right: 30px;
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 0;
       }
     }
 
