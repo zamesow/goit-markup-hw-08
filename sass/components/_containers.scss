@@ -4,8 +4,10 @@
 .team,
 .clients,
 .footer {
+  margin-left: auto;
+  margin-right: auto;
   @media screen and (max-width: 767px) {
-    width: 480px;
+    max-width: 480px;
     padding-top: 60px;
   }
   @media screen and (min-width: 768px) {
@@ -15,8 +17,6 @@
   @media screen and (min-width: 1200px) {
     width: 1200px;
     padding-top: 94px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -28,8 +28,6 @@
 .footer__container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 
   @media screen and (min-width: 480px) {
     width: 480px;

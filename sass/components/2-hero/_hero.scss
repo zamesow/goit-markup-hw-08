@@ -3,6 +3,7 @@
   background-position: center;
   background-size: cover;
 
+  padding-top: 0;
   @extend %flex-just-align;
 
   @media screen and (max-width: 767px) {

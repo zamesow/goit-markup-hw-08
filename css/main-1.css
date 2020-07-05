@@ -347,6 +347,16 @@ summary {
   max-width: 700px;
 }
 
+.hero,
+.features,
+.work,
+.team,
+.clients,
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 767px) {
   .hero,
   .features,
@@ -354,7 +364,7 @@ summary {
   .team,
   .clients,
   .footer {
-    width: 480px;
+    max-width: 480px;
     padding-top: 60px;
   }
 }
@@ -380,8 +390,6 @@ summary {
   .footer {
     width: 1200px;
     padding-top: 94px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -393,8 +401,6 @@ summary {
 .footer__container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -608,6 +614,7 @@ summary {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 0;
 }
 
 @media screen and (max-width: 767px) {
