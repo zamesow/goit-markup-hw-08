@@ -20,25 +20,25 @@
 
   &__list {
     margin-top: 0px;
-    margin-bottom: 0;
+    margin-bottom: -15;
     padding: 0px;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       display: flex;
       flex-wrap: wrap;
-      margin: -15px;
+
       justify-content: center;
     }
 
     @media screen and (min-width: 1200px) {
       display: flex;
       justify-content: space-between;
-      margin: -15px;
     }
   }
 
   &__item {
-    width: 354px;
+    @media screen and (max-width: 767px) {
+    }
 
     @media screen and (min-width: 768px) {
       width: calc((100% - 2 * 30px) / 2);

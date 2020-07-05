@@ -71,7 +71,12 @@
             </a>
           </address>
         </div>
-        <button class="nav-btn" type="button">
+        <button
+          class="nav-btn nav-btn--is-open"
+          type="button"
+          aria-expanded="false"
+          data-menu-button
+        >
           <svg
             class="nav-btn__icon"
             width="40"
@@ -79,12 +84,12 @@
             aria-label="Мобильное меню навигации"
           >
             <use
-              class="nav-btn__close"
-              href="./images/nav-btn.svg#nav-close"
-            ></use>
-            <use
               class="nav-btn__open"
               href="./images/nav-btn.svg#nav-open"
+            ></use>
+            <use
+              class="nav-btn__close"
+              href="./images/nav-btn.svg#nav-close"
             ></use>
           </svg>
         </button>
@@ -633,5 +638,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/nav-menu.js"></script>
   </body>
 </html>
