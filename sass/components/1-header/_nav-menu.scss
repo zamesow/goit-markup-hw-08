@@ -1,6 +1,9 @@
 .nav-menu {
   @media screen and (max-width: 767px) {
-    display: none;
+    &.is-open {
+      display: block;
+    }
+
     position: absolute;
     top: 100%;
     left: 0;
@@ -8,15 +11,12 @@
     width: 100%;
     min-height: 393px;
     padding: 60px 120px;
-    margin-left: 0;
+    margin: 0;
 
     background-color: $primary-white-color;
 
     font-size: 18px;
     line-height: 1.17;
-
-    &.is-open {
-      display: block;
-    }
   }
+  display: none;
 }

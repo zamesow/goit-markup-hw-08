@@ -30,20 +30,20 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-}
 
-.nav-btn .nav-btn__open {
-  display: block;
-}
+  &__open {
+    display: block;
+  }
 
-.nav-btn.is-open .nav-btn__open {
-  display: none;
-}
+  &__close {
+    display: none;
+  }
 
-.nav-btn .nav-btn__close {
-  display: none;
-}
+  & is-open .nav-btn__open {
+    display: none;
+  }
 
-.nav-btn.is-open .nav-btn__close {
-  display: block;
+  & is-open .nav-btn__close {
+    display: block;
+  }
 }

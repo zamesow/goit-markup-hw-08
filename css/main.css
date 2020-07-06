@@ -393,16 +393,19 @@ summary {
   color: #000000;
 }
 
+.header__container .nav-menu {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   .header__container .nav-menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     min-height: 393px;
     padding: 60px 120px;
-    margin-left: 0;
+    margin: 0;
     background-color: #ffffff;
     font-size: 18px;
     line-height: 1.17;
@@ -587,19 +590,19 @@ summary {
   }
 }
 
-.header__container .nav-btn .nav-btn__open {
+.header__container .nav-btn__open {
   display: block;
 }
 
-.header__container .nav-btn.is-open .nav-btn__open {
+.header__container .nav-btn__close {
   display: none;
 }
 
-.header__container .nav-btn .nav-btn__close {
+.header__container .nav-btn is-open .nav-btn__open {
   display: none;
 }
 
-.header__container .nav-btn.is-open .nav-btn__close {
+.header__container .nav-btn is-open .nav-btn__close {
   display: block;
 }
 
