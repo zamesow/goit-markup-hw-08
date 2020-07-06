@@ -656,7 +656,7 @@ summary {
 .hero__button:focus,
 .modal__send-btn:focus,
 .footer-folow__button:focus {
-  border: 2px solid #2196f3;
+  border: 1px solid yellow;
   border-radius: 4px;
   outline: none;
 }
@@ -1193,6 +1193,7 @@ summary {
 @media screen and (min-width: 1200px) {
   .footer {
     margin-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -1226,7 +1227,9 @@ summary {
 @media screen and (min-width: 1200px) {
   .footer__container {
     padding-top: 0;
-    padding-bottom: 94px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1372,7 +1375,7 @@ summary {
 .footer__container .hero__button:focus,
 .footer__container .modal__send-btn:focus,
 .footer__container .footer-folow__button:focus {
-  border: 2px solid #2196f3;
+  border: 1px solid yellow;
   border-radius: 4px;
   outline: none;
 }
@@ -1524,19 +1527,17 @@ summary {
 .modal .backdrop--is-hidden {
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(0.1);
-          transform: translate(-50%, -50%) scale(0.1);
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 580px;
-  padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -1545,6 +1546,20 @@ summary {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 580px;
+  }
 }
 
 .modal__close-icon {
@@ -1565,12 +1580,23 @@ summary {
 }
 
 .modal__title {
-  min-width: 449px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
   text-align: center;
   margin: 0 0 30px;
+}
+
+@media screen and (max-width: 1199px) {
+  .modal__title {
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    min-width: 449px;
+    line-height: 1.15;
+  }
 }
 
 .modal__send-btn {
@@ -1604,14 +1630,12 @@ summary {
 .modal__item-check {
   margin-top: 20px;
   margin-bottom: 30px;
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  color: #757575;
 }
 
 .modal__label-check {
+  font-family: Roboto;
+  font-weight: 400;
+  color: #757575;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1621,6 +1645,20 @@ summary {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .modal__label-check {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__label-check {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal__close-btn {

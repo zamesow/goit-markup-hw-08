@@ -9,6 +9,7 @@
   }
   @media screen and (min-width: 1200px) {
     margin-top: 94px;
+    padding-bottom: 94px;
   }
   &__container {
     .logo__studio--inverse {
@@ -31,7 +32,7 @@
     }
     @media screen and (min-width: 1200px) {
       padding-top: 0;
-      padding-bottom: 94px;
+      align-items: baseline;
       display: flex;
       text-align: left;
     }

@@ -4,12 +4,18 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1);
 
-  width: 528px;
-  height: 580px;
-  padding: 40px;
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 580px;
+  }
 
   background-color: $primary-white-color;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -31,13 +37,20 @@
   }
 
   &__title {
-    min-width: 449px;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
 
+    text-align: center;
     margin: 0 0 30px;
+
+    @media screen and (max-width: 1199px) {
+      line-height: 1.5;
+    }
+
+    @media screen and (min-width: 1200px) {
+      min-width: 449px;
+      line-height: 1.15;
+    }
   }
 
   &__send-btn {
@@ -72,17 +85,26 @@
   &__item-check {
     margin-top: 20px;
     margin-bottom: 30px;
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    color: $primary-text-color;
   }
 
   &__label-check {
+    font-family: Roboto;
+    font-weight: 400;
+
+    color: $primary-text-color;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 
   &__close-btn {
