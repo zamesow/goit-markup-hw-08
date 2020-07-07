@@ -1,15 +1,11 @@
 .nav-menu {
   @media screen and (max-width: 767px) {
-    &.is-open {
-      display: block;
-    }
-
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
-
     width: 100%;
-    min-height: 393px;
+    height: 393px;
     padding: 60px 120px;
     margin: 0;
 
@@ -17,6 +13,19 @@
 
     font-size: 18px;
     line-height: 1.17;
+
+    transform: translateY(1px);
+
+    z-index: 5;
+
+    & is-open {
+      display: block;
+    }
   }
-  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
 }

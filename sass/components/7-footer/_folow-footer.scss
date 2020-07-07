@@ -17,7 +17,6 @@
     color: $primary-white-color;
     @media screen and (min-width: 1200px) {
       padding: 0;
-      margin-bottom: 20px;
     }
   }
 
@@ -52,15 +51,22 @@
 
   &__button {
     @include button-blue(10px 29px);
-    margin-top: 0;
+
     display: inline-flex;
     align-items: center;
 
-    margin-left: 12px;
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+    }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-top: 20px;
     }
+    @media screen and (min-width: 1200px) {
+      margin-left: 12px;
+      margin-top: 0;
+    }
+
     .icon-send {
       margin-left: 10px;
       fill: $primary-white-color;
@@ -68,12 +74,15 @@
   }
 }
 .folow-box {
+  margin-top: 20px;
+
+  @media screen and (max-width: 767px) {
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: block;
-    margin-top: 20px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
-    margin-top: 20px;
   }
 }
