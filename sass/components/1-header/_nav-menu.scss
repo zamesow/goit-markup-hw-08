@@ -4,22 +4,22 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
-    height: 393px;
-    padding: 60px 120px;
-    margin: 0;
-
-    background-color: $primary-white-color;
+    transform: translateY(1px);
 
     font-size: 18px;
     line-height: 1.17;
 
-    transform: translateY(1px);
+    width: 100%;
+    min-height: 390px;
+    display: none;
+    background-color: $primary-white-color;
 
-    z-index: 5;
+    padding-top: 20px;
+    padding-bottom: 0;
 
-    & is-open {
+    &.is-open {
       display: block;
+      z-index: 1;
     }
   }
 
@@ -27,5 +27,6 @@
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+    margin-left: 85px;
   }
 }

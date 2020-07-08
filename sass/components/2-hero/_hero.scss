@@ -1,55 +1,63 @@
 .hero {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
   padding-top: 0;
-  @extend %flex-just-align;
-
-  @media screen and (max-width: 767px) {
-    max-width: 767px;
-    height: 400px;
-
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/fonpic-mob.jpg');
-  }
-
-  @media screen and (min-width: 768px) {
-    max-width: 1199px;
-    height: 400px;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/fonpic-tab.jpg');
-  }
-  @media screen and (min-width: 1200px) {
-    max-width: 1600px;
-    height: 600px;
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/fonpic.jpg');
-  }
 
   &__container {
     text-align: center;
-  }
-  &__title {
-    @extend %hero-font;
 
-    font-size: 26px;
-    line-height: 1.62;
-    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (max-width: 767px) {
+      max-width: 767px;
+      height: 400px;
+
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.8),
+          rgba(47, 48, 58, 0.8)
+        ),
+        url('../images/fonpic-mob.jpg');
+    }
+
+    @media screen and (min-width: 768px) {
+      max-width: 1199px;
+      height: 400px;
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.8),
+          rgba(47, 48, 58, 0.8)
+        ),
+        url('../images/fonpic-tab.jpg');
+    }
 
     @media screen and (min-width: 1200px) {
+      max-width: 1600px;
+      height: 600px;
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.8),
+          rgba(47, 48, 58, 0.8)
+        ),
+        url('../images/fonpic.jpg');
+    }
+  }
+
+  &__title {
+    @extend %hero-font;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 1199px) {
+      padding-top: 118px;
+      font-size: 26px;
+      line-height: 1.62;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 200px;
       font-size: 44px;
       line-height: 1.36;
     }

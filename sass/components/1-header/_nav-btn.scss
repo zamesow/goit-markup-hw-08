@@ -6,19 +6,7 @@
   margin-left: auto;
   background-color: transparent;
   border: none;
-
   padding: 0;
-  border: none;
-  &__icon {
-    fill: #000000;
-    padding: 0;
-    border: none;
-
-    &:hover,
-    &:focus {
-      fill: $accent_color;
-    }
-  }
 
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -31,19 +19,26 @@
     overflow: hidden;
   }
 
-  &__open {
-    display: block;
+  &__icon {
+    fill: #000000;
+    padding: 0;
+    border: none;
   }
 
   &__close {
     display: none;
   }
 
-  & is-open .nav-btn__open {
+  &.is-open .nav-btn__open {
     display: none;
   }
 
-  & is-open .nav-btn__close {
+  &.is-open .nav-btn__close {
     display: block;
   }
+}
+
+.nav-btn:hover .nav-btn__icon,
+.nav-btn:focus .nav-btn__icon {
+  fill: $accent_color;
 }

@@ -2,20 +2,18 @@
   position: relative;
   border-bottom: 1px solid #ececec;
   padding-top: 0;
-}
 
-.header__container,
-.footer__container {
-  @import '../logo';
-}
+  &__container {
+    @import '../logo';
 
-.header__container {
-  .logo__studio {
-    color: #000000;
+    .logo__studio {
+      color: #000000;
+    }
+
+    @extend %flex-align;
+    @import './nav-menu';
+    @import './nav';
+    @import './address-header';
+    @import './nav-btn';
   }
-  @extend %flex-align;
-  @import './nav-menu';
-  @import './nav';
-  @import './address-header';
-  @import './nav-btn';
 }

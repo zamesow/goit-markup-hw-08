@@ -16,56 +16,59 @@
   </head>
   <body>
     <!--Шапка сайта-->
+
     <header class="header">
       <div class="header__container">
         <a class="logo" href="./index.html"
           >Web <span class="logo__studio">Studio</span>
         </a>
-
-        <nav class="header-nav">
-          <ul class="header-nav__list">
-            <li class="header-nav__item">
-              <a
-                class="header-nav__link header-nav__link--active"
-                href="./index.html"
-                >Студия</a
-              >
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="header-address">
-          <a
-            class="header-address__link header-address__link--mail"
-            href="mailto:info@devstudio.com"
-          >
-            <svg class="address-icon address-icon--mail" width="16" height="12">
-              <use href="./images/sprite.svg#mail"></use>
-            </svg>
-            info@devstudio.com
-          </a>
-          <a
-            class="header-address__link header-address__link--phone"
-            href="tel:+380961111111"
-          >
-            <svg
-              class="address-icon address-icon--phone"
-              width="10"
-              height="15"
+        <div class="nav-menu" id="nav-menu" data-menu>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="./index.html">Студия</a>
+              </li>
+              <li class="header-nav__item header-nav__link--active">
+                <a class="header-nav__link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="header-address">
+            <a
+              class="header-address__link header-address__link--mail"
+              href="mailto:info@devstudio.com"
             >
-              <use href="./images/sprite.svg#phone"></use>
-            </svg>
-            +38 096 111 11 11
-          </a>
-        </address>
-
+              <svg
+                class="address-icon address-icon--mail"
+                width="16"
+                height="12"
+              >
+                <use href="./images/sprite.svg#mail"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+            <a
+              class="header-address__link header-address__link--phone"
+              href="tel:+380961111111"
+            >
+              <svg
+                class="address-icon address-icon--phone"
+                width="10"
+                height="15"
+              >
+                <use href="./images/sprite.svg#phone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </address>
+        </div>
         <button
-          class="nav-btn is-open"
+          class="nav-btn"
           type="button"
           aria-expanded="false"
           aria-controls="nav-menu"
@@ -79,23 +82,23 @@
           >
             <use
               class="nav-btn__open"
-              href="./images/nav-btn.svg#nav-open"
+              href="./images/nav-open-sprite.svg#nav-open"
             ></use>
             <use
               class="nav-btn__close"
-              href="./images/nav-btn.svg#nav-close"
+              href="./images/nav-close-sprite.svg#nav-close"
             ></use>
           </svg>
         </button>
-        <div class="nav-menu is-open" id="nav-btn" data-menu></div>
       </div>
     </header>
+
     <main class="main-portfolio">
       <section class="filter">
         <!--Фильтр-->
         <!--Скрытый заголовок Фильтра-->
         <h1 class="visually-hidden">Фильтр</h1>
-        <div class="filter__buttons">
+        <div class="filter__container">
           <button class="filter__btn" type="button">Все</button>
           <button class="filter__btn" type="button">Веб-сайты</button>
           <button class="filter__btn" type="button">Приложения</button>
@@ -390,7 +393,7 @@
             >Подпишитесь на рассылку</label
           >
           <br />
-          <div>
+          <div class="folow-box">
             <input
               class="footer-folow__input"
               type="email"
@@ -398,7 +401,7 @@
               id="folow"
               placeholder="E-mail"
             />
-            <button type="button" class="footer-folow__button">
+            <button type="submit" class="footer-folow__button">
               Подписаться
               <svg class="icon-send" width="24" height="24">
                 <use href="./images/sprite.svg#icon-send"></use>
@@ -408,5 +411,7 @@
         </form>
       </div>
     </footer>
+
+    <script src="./js/nav-menu.js"></script>
   </body>
 </html>

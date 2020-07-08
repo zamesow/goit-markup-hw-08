@@ -1,23 +1,31 @@
 .header-address {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-  font-size: 14px;
-  line-height: 1.14;
   font-weight: 500;
   letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 1.17;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     font-size: 12px;
     line-height: 1.17;
     margin-left: auto;
-    margin-bottom: 21px;
-    margin-top: 21px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
+
   @media screen and (min-width: 1200px) {
     margin-left: auto;
     display: inline-flex;
     align-items: center;
+    font-size: 14px;
+    line-height: 1.14;
   }
 
   &__link {
@@ -39,6 +47,10 @@
     }
 
     &--mail {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 16px;
+      }
+
       @media screen and (min-width: 768px) and (max-width: 1199px) {
         margin-top: 0;
         margin-bottom: 10px;
