@@ -1918,7 +1918,7 @@ body.modal-open {
   border: none;
 }
 
-.modal__close-btn:hover {
+.modal__close-btn:hover .modal__close-icon {
   fill: #2196f3;
   --color2: $accent-color;
 }
@@ -2053,12 +2053,44 @@ body.modal-open {
   }
 }
 
+.filter .filter-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .filter .filter-btns {
+    margin-bottom: 25px;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter .filter-btns {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter .filter-btns {
+    margin-bottom: 50px;
+  }
+}
+
 .filter__btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
-  margin-right: 2px;
+  margin-right: 8px;
   border-radius: 4px;
   padding: 6px 22px;
   border: 1px solid transparent;
@@ -2069,18 +2101,6 @@ body.modal-open {
 @media screen and (max-width: 767px) {
   .filter__btn {
     margin-bottom: 15px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .filter__btn {
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .filter__btn {
-    margin-bottom: 50px;
   }
 }
 
@@ -2164,6 +2184,8 @@ body.modal-open {
   height: 100%;
   display: inline-block;
   color: #ffffff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);

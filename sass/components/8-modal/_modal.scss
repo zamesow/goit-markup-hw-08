@@ -124,7 +124,7 @@ body.modal-open {
     background-color: transparent;
     border: none;
 
-    &:hover {
+    &:hover .modal__close-icon {
       fill: $accent-color;
       --color2: $accent-color;
     }
