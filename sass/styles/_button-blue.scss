@@ -1,8 +1,6 @@
 @mixin button-blue($padding) {
   display: inline-block;
   padding: $padding;
-  //   10px 32px
-  //   10px 29px
   margin-top: 30px;
   border: 1px solid $accent-color;
   border-radius: 4px;
@@ -12,14 +10,9 @@
   line-height: 1.88;
   color: $primary-white-color;
   background-color: $accent-color;
+  margin-top: 0;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  @media screen and (max-width: 1199px) {
-    margin-top: 0;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-top: 0;
-  }
 }
 .hero__button:focus,
 .modal__send-btn:focus,

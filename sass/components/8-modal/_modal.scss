@@ -11,6 +11,8 @@ body.modal-open {
   padding: 40px;
   transform: translate(-50%, -50%) scale(1);
 
+  transition: transform $cubic;
+
   @media screen and (max-width: 1199px) {
     width: 450px;
     height: 609px;
@@ -26,18 +28,19 @@ body.modal-open {
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 
-  transition: transform $cubic;
-
   &__close-icon {
     border: none;
+    border-radius: 50%;
     padding: 0;
     margin: 0;
-    border: none;
+
     --color3: rgba(0, 0, 0, 0.1);
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: fill $cubic;
   }
 
   &__title {
@@ -126,7 +129,6 @@ body.modal-open {
 
     &:hover .modal__close-icon {
       fill: $accent-color;
-      --color2: $accent-color;
     }
   }
 
@@ -162,6 +164,12 @@ body.modal-open {
 
   &__check-link {
     text-decoration: underline;
+    transition: color $cubic;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 
   &__input:focus {

@@ -179,12 +179,21 @@
           <ul class="work__list">
             <li class="work__item">
               <a class="work__link" href="">
-                <img
-                  class="work__img"
-                  src="./images/desktop.jpg"
-                  width="370"
-                  alt="Ноутбук"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/work-desktop.webp    1x,
+                      ./images/work-desktop@2x.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="work__img"
+                    src="./images/work-desktop.jpg"
+                    alt="Десктоп"
+                  />
+                </picture>
                 <div class="work__box">
                   <h3 class="work__subtitle">Десктопные приложения</h3>
                 </div>
@@ -192,12 +201,21 @@
             </li>
             <li class="work__item">
               <a class="work__link" href="">
-                <img
-                  class="work__img"
-                  src="./images/mobile.jpg"
-                  width="370"
-                  alt="Смартфон"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/work-mobile.webp    1x,
+                      ./images/work-mobile@2x.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="work__img"
+                    src="./images/work-mobile.jpg"
+                    alt="Смартфон"
+                  />
+                </picture>
                 <div class="work__box">
                   <h3 class="work__subtitle">Мобильные приложения</h3>
                 </div>
@@ -205,12 +223,21 @@
             </li>
             <li class="work__item">
               <a class="work__link" href="">
-                <img
-                  class="work__img"
-                  src="./images/design.jpg"
-                  width="370"
-                  alt="Дизайн"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/work-design.webp    1x,
+                      ./images/work-design@2x.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="work__img"
+                    src="./images/work-design.jpg"
+                    alt="Дизайн"
+                  />
+                </picture>
                 <div class="work__box">
                   <h3 class="work__subtitle">Дизайнерские решения</h3>
                 </div>
@@ -227,12 +254,37 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/nikola.jpg                                "
-                width="270"
-                alt="Фото Джона Смитта"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-nikola.webp    1x,
+                    ./images/team-nikola@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-nikola.webp    1x,
+                    ./images/team-nikola@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-nikola.webp    1x,
+                    ./images/team-nikola@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team-nikola.jpg"
+                  alt="Фото Николай Кучеренко"
+                />
+              </picture>
               <h3 class="team__subtitle">Николай Кучеренко</h3>
               <p class="team__text">Product Designer</p>
               <ul class="soc-links">
@@ -267,12 +319,37 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/olga.jpg"
-                width="270"
-                alt="Фото Марты Стюарт"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-olga.webp    1x,
+                    ./images/team-olga@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-olga.webp    1x,
+                    ./images/team-olga@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-olga.webp    1x,
+                    ./images/team-olga@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team-olga.jpg"
+                  alt="Фото Ольга Иванова"
+                />
+              </picture>
               <h3 class="team__subtitle">Ольга Иванова</h3>
               <p class="team__text">Frontend Developer</p>
               <ul class="soc-links">
@@ -307,12 +384,37 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/andre.jpg"
-                width="270"
-                alt="Фото Роберта Джекиса"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-andre.webp    1x,
+                    ./images/team-andre@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-andre.webp    1x,
+                    ./images/team-andre@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-andre.webp    1x,
+                    ./images/team-andre@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team-andre.jpg"
+                  alt="Фото Андрей Шевченко"
+                />
+              </picture>
               <h3 class="team__subtitle">Андрей Шевченко</h3>
               <p class="team__text">Marketing</p>
               <ul class="soc-links">
@@ -347,12 +449,38 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/ivan.jpg"
-                width="270"
-                alt="Фото Мартина Доэ"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team-ivan.webp    1x,
+                    ./images/team-ivan@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-ivan.webp    1x,
+                    ./images/team-ivan@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team-ivan.webp    1x,
+                    ./images/team-ivan@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team-ivan.jpg"
+                  alt="Фото Иван Николаев"
+                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                />
+              </picture>
               <h3 class="team__subtitle">Иван Николаев</h3>
               <p class="team__text">UI Designer</p>
               <ul class="soc-links">
