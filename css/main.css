@@ -2031,9 +2031,6 @@ body.modal-open {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
@@ -2048,16 +2045,16 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .filter__item {
-    width: calc(100% - 2 * 30px)/2;
+    width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .filter__item {
-    width: calc(100% - 3 * 30px)/3;
+    width: calc((100% - 3 * 30px) / 3);
     margin: 15px;
   }
 }
@@ -2123,6 +2120,9 @@ body.modal-open {
   color: #212121;
   margin-top: 0;
   margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .filter .section-text-item {
