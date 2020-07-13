@@ -81,21 +81,21 @@
   }
 
   &__subtitle {
-    font-weight: $fw-500;
+    font-weight: 500;
     color: $title-text-color;
     margin-top: 30px;
   }
 
   &__text {
-    font-weight: $fw-400;
+    font-weight: 400;
     color: $primary-text-color;
     margin-top: 10px;
   }
 
   &__subtitle,
   &__text {
-    font-size: $fs-16;
-    line-height: $lh-119;
+    font-size: 16px;
+    line-height: 1.19;
 
     margin-bottom: 0;
     text-align: center;
